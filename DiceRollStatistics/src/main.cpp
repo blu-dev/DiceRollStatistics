@@ -20,11 +20,10 @@ int main(void)
 	std::cin.get();
 	if (GET_TOTAL(maxValue, diceCount) > 1000)
 	{
-		std::cout << "Warning! This **may** take up a decent chunk of memory. To continue, press any key." << std::endl;
+		std::cout << "Warning! This **may** take up a decent chunk of memory. To continue, press [ENTER]" << std::endl;
 		std::cin.get();
 	}
 	std::vector<std::vector<size_t>> combinations(GET_TOTAL(maxValue, diceCount));
-	std::cout << combinations.max_size() << std::endl;
 	for (size_t i = 0; i < combinations.size(); i++)
 	{
 		combinations[i] = std::vector<size_t>(diceCount);
@@ -37,7 +36,7 @@ int main(void)
 	{
 		std::cout << finished2[i].first.first << "\t" << finished2[i].first.second << "\t" << std::fixed << std::setprecision(2) << finished2[i].second * 100 << "%" << std::endl;
 	}
-	std::cout << "\nPress any key to exit..." << std::endl;
+	std::cout << "\nPress [ENTER] to exit..." << std::endl;
 	std::cin.get();
 }
 
